@@ -81,6 +81,7 @@ export const Navbar = () => {
           >
             <ButtonIcon
               svgComponent={<CloseSvg />}
+              rounded
               onClick={hideMenu}
             />
           </div>
