@@ -1,7 +1,7 @@
-import { HelloWorld } from '@/components/HelloWorld'
+import { Navbar } from '@/components/Navbar'
 
 const Index = () => {
-  return <HelloWorld />
+  return <Navbar />
 }
 
 export default Index
