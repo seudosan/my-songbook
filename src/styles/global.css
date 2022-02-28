@@ -7,4 +7,8 @@
   html {
     @apply font-asap
   }
+  
+  *:focus-visible {
+    @apply outline-green-500 outline outline-2
+  }
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
+import { ButtonIcon } from '@/components/ButtonIcon'
 import { ArrowSvg, MenuSvg, SearchSvg, DoveSvg } from '../Svg'
 
 export const Navbar = () => {
@@ -15,33 +16,36 @@ export const Navbar = () => {
 
   return (
     <header className='h-12 bg-slate-700 w-full flex items-center justify-center px-4 border-b-2 border-gray-600'>
-      <div className='container flex justify-between fill-slate-200 space-x-3'>
+      <div className='container flex justify-between space-x-3'>
         {inputState
           ? (
-            <button onClick={hanldeInputState}>
-              <ArrowSvg className='h-7 -rotate-90' />
-            </button>
+            <ButtonIcon
+              className='-rotate-90'
+              onClick={hanldeInputState}
+              svgComponent={<ArrowSvg />}
+            />
             )
           : (
             <Link href='/'>
               <a>
-                <DoveSvg className='h-7' />
+                <ButtonIcon svgComponent={<DoveSvg />} />
               </a>
             </Link>
             )}
         {inputState &&
           <input
-            className='w-full h-9 bg-slate-900 text-slate-200 px-4 rounded-sm'
+            className='w-full h-9 bg-slate-900 text-slate-200 px-4 rounded-sm focus:border-0'
             ref={inputRef}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />}
         <div className='flex items-center space-x-3'>
           {!inputState &&
-            <button onClick={hanldeInputState}>
-              <SearchSvg className='h-7' />
-            </button>}
-          <MenuSvg className='h-7' />
+            <ButtonIcon
+              onClick={hanldeInputState}
+              svgComponent={<SearchSvg />}
+            />}
+          <ButtonIcon svgComponent={<MenuSvg />} />
         </div>
       </div>
     </header>
