@@ -15,8 +15,8 @@ export const Navbar = () => {
   }, [inputState])
 
   return (
-    <header className='h-12 bg-slate-700 w-full flex items-center justify-center px-4 border-b-2 border-gray-600'>
-      <div className='container flex justify-between space-x-3'>
+    <header className='h-12 bg-slate-700 w-full flex items-center justify-center border-b-2 border-gray-600'>
+      <div className='container flex justify-between items-center h-full space-x-1'>
         {inputState
           ? (
             <ButtonIcon
@@ -28,7 +28,7 @@ export const Navbar = () => {
           : (
             <Link href='/'>
               <a>
-                <ButtonIcon svgComponent={<DoveSvg />} />
+                <DoveSvg className='h-12 w-12 p-3 fill-slate-200' />
               </a>
             </Link>
             )}
@@ -39,13 +39,15 @@ export const Navbar = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />}
-        <div className='flex items-center space-x-3'>
+        <div className='flex items-center'>
           {!inputState &&
             <ButtonIcon
               onClick={hanldeInputState}
               svgComponent={<SearchSvg />}
             />}
-          <ButtonIcon svgComponent={<MenuSvg />} />
+          {inputState
+            ? <ButtonIcon svgComponent={<SearchSvg />} />
+            : <ButtonIcon svgComponent={<MenuSvg />} />}
         </div>
       </div>
     </header>
