@@ -9,7 +9,7 @@ export const ButtonIcon = ({ children, className, svgComponent, ...restProps }) 
   )
 
   return (
-    <button className='m-1 p-2 outline-none focus:bg-gray-600 rounded-full' {...restProps}>
+    <button className='p-3 outline-none focus:bg-slate-50 focus:bg-opacity-10' {...restProps}>
       {renderChildren}
     </button>
   )
