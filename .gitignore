@@ -1,3 +1,6 @@
+# Next-PWA
+**/public/workbox-*.js
+**/public/sw.js
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,nextjs,react,windows,linux,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,nextjs,react,windows,linux,macos
