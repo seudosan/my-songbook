@@ -15,7 +15,7 @@ export const ButtonIcon = ({ children, className, svgComponent, size, rounded, .
         'focus:bg-slate-50 focus:bg-opacity-10',
         rounded && 'rounded-full p-2 m-1',
         size === SIZE[0] && 'p-2',
-        size === SIZE[1] && 'p-3',
+        size === SIZE[1] && 'p-4',
         className
       )}
       {...restProps}

@@ -43,7 +43,7 @@ export const Navbar = () => {
   }, [inputState])
 
   return (
-    <header className='h-12 bg-slate-700 w-full flex items-center justify-center border-b-2 border-gray-600 relative'>
+    <header className='h-14 bg-slate-700 w-full flex items-center justify-center border-b-2 border-gray-600 relative'>
       <div className='container flex justify-between items-center h-full space-x-1'>
         {inputState
           ? (
@@ -56,7 +56,7 @@ export const Navbar = () => {
           : (
             <Link href='/'>
               <a>
-                <DoveSvg className='h-12 w-12 p-3 fill-slate-200' />
+                <DoveSvg className='h-14 w-14 p-3 fill-slate-200' />
               </a>
             </Link>
             )}
@@ -114,6 +114,7 @@ export const Navbar = () => {
           >
             <ButtonIcon
               svgComponent={<CloseSvg />}
+              size='sm'
               rounded
               onClick={hideMenu}
             />
