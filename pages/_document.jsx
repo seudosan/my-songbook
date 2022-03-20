@@ -6,11 +6,7 @@ export default function Document () {
       <Head>
         <link rel='manifest' href='/manifest.webmanifest' />
         <link
-          href='https://fonts.googleapis.com/css2?family=Asap&display=optional'
-          rel='stylesheet'
-        />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Quicksand&display=optional'
+          href='https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap'
           rel='stylesheet'
         />
       </Head>
