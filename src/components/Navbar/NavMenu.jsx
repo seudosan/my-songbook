@@ -18,7 +18,7 @@ export const Render = () => {
               className='rounded-full'
             />
             <div className='flex flex-col ml-3'>
-              <span className='text-slate-50'>{USER.displayName || 'Username'}</span>
+              <span className='text-slate-50'>{USER.email || 'Username'}</span>
               <Link href='/'>
                 <a className='text-sm text-sky-500'>Ajustes de cuenta</a>
               </Link>
